@@ -9,7 +9,6 @@ boolMissing=dfCarbonDioxide['value']==-999.99
 dfCarbonDioxide[boolMissing]=np.nan
 dfCarbonDioxide=dfCarbonDioxide.dropna()
 dfCarbonDioxide=dfCarbonDioxide.reset_index(drop=True)
-print(dfCarbonDioxide)
 
 fig, ax = plt.subplots(figsize=(12,8))
 ax.plot(dfCarbonDioxide['date'],dfCarbonDioxide['value'],'ok')
