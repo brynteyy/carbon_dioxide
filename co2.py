@@ -10,6 +10,7 @@ dfCarbonDioxide[boolMissing]=np.nan
 dfCarbonDioxide=dfCarbonDioxide.dropna()
 dfCarbonDioxide=dfCarbonDioxide.reset_index(drop=True)
 
+#make a plot
 fig, ax = plt.subplots(figsize=(12,8))
 ax.plot(dfCarbonDioxide['date'],dfCarbonDioxide['value'],'ok')
 ax.format_xdata = mdates.DateFormatter('%Y-%m-%d')
